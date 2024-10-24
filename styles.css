@@ -1,0 +1,61 @@
+
+body { 
+	  font-family: "Lora", serif;
+	  font-optical-sizing: auto;
+	  font-weight: 600;
+	  font-style: normal;
+	  background: lightpink;
+}
+
+.gif_container{
+  text-align: center;
+}
+
+.gif_container img{
+  display: inline-block;
+}
+
+h1 {
+	text-align: center;
+	font-size: 40px;
+}
+
+.color{
+	color: deeppink;
+}
+
+.btncontainer button {
+	padding: 10px 20px;
+	background: hotpink;
+	color: black;
+	border-radius: 20px;
+	font-family: Helvetica;
+	font-size: 15px;
+	border:none;
+	transition: all 0.5s ease, transform 0.5s ease;
+}
+
+.btncontainer {
+  text-align: center;
+}
+
+.btncontainer button {
+  display: inline-block;
+  font-weight: bold;
+  transition: all 0.5s ease, transform 0.5s ease;
+}
+
+.home {
+	margin-top: 20px;
+}
+
+.btncontainer p {
+	font-size: 10px;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .home {
+    	margin-top: 150px;
+    }
+}

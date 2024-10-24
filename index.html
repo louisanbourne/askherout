@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Qwitcher+Grypen:wght@400;700&display=swap" rel="stylesheet">
+	<title> Date </title>
+</head>
+<body>
+	<section class="home">
+		<div class="gif_container">
+			<img src="https://i.pinimg.com/originals/2e/a9/49/2ea9495199eaebb3c4fdba7f32f86ff2.gif" alt="cut bear using phone" width="200">
+		</div>
+	
+		<h1> Would you like to go on <br> <div class="color">a Date?</div></h1>
+		<div class="btncontainer">
+			<button class="btn" id="yesButton" onclick="nextPage()"> Yes! </button>
+			<button class="btn" id="noButton" > No. </button>
+        	<p> If you have something to say, reach out to - Telegram <a href="#">@LouisAnbourne</a></p>
+		</div>
+	</section>
+	
+	
+	<script>
+		function nextPage() {
+    		window.location.href = "yes.html";
+		}
+
+		const noButton = document.getElementById('noButton');
+
+		noButton.addEventListener('click', () => {
+		    noButton.disabled = true; // Disable the button
+
+		    // Move the button to a random position
+		    const randomX = Math.random() * (window.innerWidth - noButton.offsetWidth);
+		    const randomY = Math.random() * (window.innerHeight - noButton.offsetHeight);
+
+		    noButton.style.position = 'absolute';
+		    noButton.style.left = `${randomX}px`;
+		    noButton.style.top = `${randomY}px`;
+
+		    // Optionally, enable the button again after a delay
+		    setTimeout(() => {
+		        noButton.disabled = false; // Enable the button after 2 seconds
+		    }, 2000);
+		});
+	</script>
+</body>
+</html>
