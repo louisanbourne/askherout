@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Qwitcher+Grypen:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="places.css">
+	<title> Places </title>
+</head>
+<body>
+	<section class="text">
+		<div class="textwrapper">
+		 	<h1> Where do you <br> wanna go, Ma'am?</h1>
+		</div>
+	</section>
+	
+	<section class="places">
+		<div class="columns">
+			<input type="checkbox" id="checkbox1" class="checkbox"> <br>
+			<img src="../images/place/movie.jpg" alt="cinema" width="200px">
+			<h1> Cinemas </h1>
+				<ul>
+					<li> City Mall St. John Cineplex </li>
+					<li> Junction City Cineplex </li>
+					<li> K Cinema </li>
+					<li> Mingala Cinema </li>
+					<li> Star Cineplex </li>
+				</ul>
+		</div>
+		<div class="columns">
+			<input type="checkbox" id="checkbox2" class="checkbox"> <br>
+			<img src="../images/place/noodle.jpg" alt="noodleshop" width="200px">
+			<h1> Noodle Shops</h1>
+				<ul>
+					<li> Pann Hlaing Noodle </li>
+					<li> Shan Noodle House </li>
+					<li> YKKO Noodle House </li>
+					<li> Kachin Noodle Shop </li>
+					<li> Burmese Noodle House </li>
+				</ul>
+		</div>
+		<div class="columns">
+			<input type="checkbox" id="checkbox3" class="checkbox"> <br>
+			<img src="../images/place/cafe.jpg" alt="Cafés" width="200px" height="150px">
+			<h1> Cafés </h1>
+				<ul>
+					<li> Acid Bar </li>
+					<li> Café Salween </li>
+					<li> La Tartine </li>
+					<li> The Rangoon Tea House </li>
+					<li> The Secretariat </li>
+				</ul>
+		</div>
+		<div class="columns">
+			<input type="checkbox" id="checkbox1" class="checkbox"> <br>
+			<img src="../images/place/arcades.jpg" alt="cinema" width="200px">
+			<h1> Arcades </h1>
+				<ul>
+					<li> Alibaba Arcade </li>
+					<li> Game On Arcade </li>
+					<li> VRZone Yangon </li>
+					<li> Timezone Junction City </li>
+				</ul>
+		</div>
+	</section>
+	<section class="submit">
+		<p> What are we going to eat? <a href="#"> Let's pick food!</a></p>
+		<button id="food" onclick="nextPage()"> Food.. </button>
+	</section> <br> 
+	<footer>
+		<p class="italic">
+			Wise men say, only fools rush in <br>
+			But I can't help falling in love with you
+		</p>
+	</footer>
+	<script>
+		function nextPage() {
+			window.location.href = "../food/food.html";
+		}
+	</script>
+</body>
+</html>
