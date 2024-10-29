@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Choose Your Food</title>
+  <link rel="stylesheet" href="food.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Select Your Food for the Date</h2>
+    
+    <div class="food-grid">
+      <label>
+        <input type="radio" name="food" value="Pizza" required>
+        <img src="../images/food/pizza.jpg" alt="Pizza" />
+        <span>Pizza</span>
+      </label>
+      <label>
+        <input type="radio" name="food" value="Burger">
+        <img src="../images/food/burger.jpg" alt="Burger" />
+        <span>Burger</span>
+      </label>
+      <label>
+        <input type="radio" name="food" value="Pasta">
+        <img src="../images/food/pasta.webp" alt="Pasta" />
+        <span>Pasta</span>
+      </label>
+      <label>
+        <input type="radio" name="food" value="Sushi">
+        <img src="../images/food/sushi.jpg" alt="Sushi" />
+        <span>Sushi</span>
+      </label>
+      <label>
+        <input type="radio" name="food" value="Salad">
+        <img src="../images/food/Tofunway.jpg" alt="Noodle" />
+        <span> Tofu Nway </span>
+      </label>
+      <label>
+        <input type="radio" name="food" value="Tacos">
+        <img src="../images/food/malaxaingguo.webp" alt="Malaxinguo" />
+        <span> Malaxinguo</span>
+      </label>
+      <label>
+        <input type="radio" name="food" value="Steak">
+        <img src="../images/food/steak.jpg" alt="Steak" />
+        <span>Steak</span>
+      </label>
+      <label>
+        <input type="radio" name="food" value="Ice Cream">
+        <img src="../images/food/icecream.jpg" alt="Ice Cream" />
+        <span>Ice Cream</span>
+      </label>
+      <label>
+        <input type="radio" name="food" value="Chocolate">
+        <img src="../images/food/chocolate.jpg" alt="Chocolate" />
+        <span>Chocolate</span>
+      </label>
+      <label>
+        <input type="radio" name="food" value="Fruit">
+        <img src="../images/food/fruit.jpg" alt="Fruit" />
+        <span>Fruit</span>
+      </label>
+      <label>
+        <input type="radio" name="food" value="Cookies">
+        <img src="../images/food/cookies.jpg" alt="Cookies" />
+        <span>Cookies</span>
+      </label>
+      <label>
+        <input type="radio" name="food" value="Pancakes">
+        <img src="../images/food/pancake.jpg" alt="Pancakes" />
+        <span>Pancakes</span>
+      </label>
+    </div>
+
+    <label for="wishes">Any Food you want to add? </label>
+    <textarea id="wishes" name="wishes" rows="4" placeholder="Enter here..."></textarea>
+
+    <button type="submit" id="submitButton">Submit Choices</button>
+    <a href="../schedule/schedule.html"><button type="submit" id="submitButton"> Go to Next Page >> </button></a>
+  </div>
+
+  <script>
+    document.getElementById("submitButton").addEventListener("click", function(event) {
+  event.preventDefault(); // Prevent default action
+
+  const selectedFoods = Array.from(document.querySelectorAll('input[name="food"]:checked'))
+    .map(checkbox => checkbox.value);
+  const wishes = document.getElementById("wishes").value;
+
+  if (selectedFoods.length > 0) {
+    selectedFoods.forEach(food => {
+      console.log(`You selected: ${food}`);
+    });
+    if (wishes) {
+      console.log(`Add-ons: ${wishes}`);
+    }
+  } else {
+    console.log("Please select at least one food option.");
+  }
+
+});
+  </script>
+</body>
+</html>

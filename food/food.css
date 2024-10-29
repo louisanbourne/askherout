@@ -1,0 +1,91 @@
+:root {
+  /* Color Variables */
+  --primary-color: #d28c8c;     /* Pink */
+  --secondary-color: #b37979;   /* Darker Pink */
+  --background-color: #f3f0ec;  /* Light Grey Background */
+  --text-color: #333333;        /* Dark Text */
+  --input-border-color: #cccccc; /* Light Grey Border */
+  --button-text-color: #ffffff; /* White Button Text */
+  --font-family: Arial, sans-serif;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: lightpink;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  background-color: antiquewhite;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  color: var(--primary-color);
+}
+
+.food-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.food-grid label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.food-grid input[type="radio"] {
+  display: none; /* Hide the radio button */
+}
+
+.food-grid img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%; /* Circular images */
+  object-fit: cover;
+  border: 2px solid var(--input-border-color);
+  transition: transform 0.2s;
+}
+
+.food-grid input[type="radio"]:checked + img {
+  border-color: var(--primary-color);
+  transform: scale(1.1); /* Scale up the selected image */
+}
+
+textarea {
+  width: 100%;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid var(--input-border-color);
+  margin: 10px 0px;
+}
+
+button {
+  background-color: var(--primary-color);
+  color: var(--button-text-color);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: var(--secondary-color);
+}
+
+/* Media Query for Responsiveness */
+@media (max-width: 600px) {
+  .food-grid {
+    grid-template-columns: repeat(2, 1fr); /* Stack food options on small screens */
+  }
+}
