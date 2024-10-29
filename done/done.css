@@ -29,7 +29,7 @@ body {
     text-align: center;
     padding: 20px;
     border-radius: 15px;
-    background-color: var(--accent-color);
+    background-color: antiquewhite;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     max-width: 400px;
     width: 90%;
