@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ask Her Out</title>
+  <link rel="stylesheet" href="schedule.css">
+</head>
+<body>
+  <div class="date-time-container">
+    <h2>Select Your Date and Time</h2>
+    <form id="dateTimeForm">
+      <label for="date">Choose a Date:</label>
+      <input type="date" id="date" name="date">
+
+      <label for="time">Choose a Time:</label>
+      <input type="time" id="time" name="time">
+
+      <label for="location">Location (Optional):</label>
+      <input type="text" id="location" name="location" placeholder="Enter location">
+<br>
+      <button type="submit" onclick="nextPage()">Confirm Date</button>
+    </form>
+  </div>
+  <script type="text/javascript">
+    function nextPage() {
+        window.location.href = "../done/done.html";
+    }
+
+  	    document.getElementById("dateTimeForm").addEventListener("submit", function(event) {
+		event.preventDefault();
+		const date = document.getElementById("date").value;
+		const time = document.getElementById("time").value;
+		const location = document.getElementById("location").value;
+		  
+		// if (date && time) {
+		//   alert(`Your date is set for ${date} at ${time}${location ? " at " + location : ""}.`);
+		// } else {
+		//   alert("Please choose both a date and time.");
+		// }
+	});
+  </script>
+</body>
+</html>
