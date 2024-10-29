@@ -1,0 +1,72 @@
+/* Set up CSS variables for colors */
+:root {
+    --background-color: #ffebf0;
+    --text-color: #333;
+    --primary-color: #ff69b4;
+    --accent-color: #ffc1d6;
+}
+
+/* Basic reset for consistency */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    overflow: hidden;
+}
+
+/* Main container styling */
+.container {
+    text-align: center;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: var(--accent-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 90%;
+}
+
+/* Header and paragraph styling */
+h1 {
+    color: var(--primary-color);
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.3em;
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+/* GIF styling */
+img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Hover effect for the GIF */
+img:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive adjustments */
+@media (max-width: 500px) {
+    h1 {
+        font-size: 2em;
+    }
+    p {
+        font-size: 1.1em;
+    }
+}
