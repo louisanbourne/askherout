@@ -77,12 +77,12 @@
     <textarea id="wishes" name="wishes" rows="4" placeholder="Enter here..."></textarea>
 
     <button type="submit" id="submitButton">Submit Choices</button> <br>
-    <a href="../schedule/schedule.html"><button type="submit" id="submitButton"> Go to Next Page >> </button></a>
+    <a href="../schedule/schedule.html"><button type="submit" id="submitButton"> Let's pick date & time!! >> </button></a>
   </div>
 
   <script>
     document.getElementById("submitButton").addEventListener("click", function(event) {
-  event.preventDefault(); // Prevent default action
+  event.preventDefault(); 
 
   const selectedFoods = Array.from(document.querySelectorAll('input[name="food"]:checked'))
     .map(checkbox => checkbox.value);
